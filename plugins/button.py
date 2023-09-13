@@ -18,7 +18,7 @@ def start_button(client):
     if not FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="Group", url=client.invitelink2),
+                InlineKeyboardButton(text="Group", url="https://t.me/+ja5muiJbYWEyMzVl"),
             ],
             [
                 InlineKeyboardButton(text="Donate", callback_data="help"),
@@ -44,7 +44,7 @@ def start_button(client):
             ],
             [
                 InlineKeyboardButton(text="Channel 1", url=client.invitelink),
-                InlineKeyboardButton(text="Channel 2", url=client.invitelink2),
+                InlineKeyboardButton(text="Channel 2", url="https://t.me/+ja5muiJbYWEyMzVl"),
             ],
             [InlineKeyboardButton(text="Close", callback_data="close")],
         ]
@@ -55,7 +55,7 @@ def fsub_button(client, message):
     if not FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="Join Channel 2", url=client.invitelink2),
+                InlineKeyboardButton(text="Join Channel 2", url="https://t.me/+ja5muiJbYWEyMzVl"),
             ],
         ]
         try:
@@ -92,7 +92,7 @@ def fsub_button(client, message):
         buttons = [
             [
                 InlineKeyboardButton(text="Channel 1", url=client.invitelink),
-                InlineKeyboardButton(text="Channel 2", url=client.invitelink2),
+                InlineKeyboardButton(text="Channel 2", url="https://t.me/+ja5muiJbYWEyMzVl"),
             ],
         ]
         try:
