@@ -59,6 +59,14 @@ async def start_command(client: Bot, message: Message):
         await add_user(id, user_name)
     except:
         pass
+
+    # Send the start image
+    with open('https://graph.org/file/6c1d2550f3b5dd5448b03.jpg', 'rb') as img:
+        await message.reply_photo(
+            photo=img,
+            caption=START_MSG,
+        )
+
     text = message.text
     if len(text) > 7:
         try:
@@ -145,9 +153,7 @@ async def start_command(client: Bot, message: Message):
             quote=True,
         )
 
-
     return
-
 
 @Bot.on_message(filters.command("start") & filters.private)
 async def not_joined(client: Bot, message: Message):
