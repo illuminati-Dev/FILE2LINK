@@ -60,12 +60,16 @@ async def start_command(client: Bot, message: Message):
     except:
         pass
 
-    # Send the start image
-    with open('https://graph.org/file/6c1d2550f3b5dd5448b03.jpg', 'rb') as img:
-        await message.reply_photo(
-            photo=img,
-            caption=START_MSG,
-        )
+    # Specify the URL of the start image
+    start_image_url = 'https://graph.org/file/6c1d2550f3b5dd5448b03.jpg'
+
+    # Send the start image directly from the URL
+    await message.reply_photo(
+        photo=start_image_url,
+        caption=START_MSG,
+    )
+
+    # The rest of your code...
 
     text = message.text
     if len(text) > 7:
